@@ -1,5 +1,12 @@
 @startuml Simpson
 class Ventana
-class Menu
-class Simpson
-class
+class MenuInicio
+class Metodo
+class Ecuacion
+class 
+
+Ventana -> MenuInicio
+MenuInicio -|> Metodo
+Metodo -|> Ecuacion
+
+@enduml
