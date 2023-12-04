@@ -91,12 +91,57 @@ public:
                                                                 {
                                                                    cout << "1.Trigonometrica \n2.Hiperbolica \n3.Exponencial o logaritmica \n4.Raiz o potencia \n5.Suma, resta o por la variable \n6.Regresar" << endl;
                                                                     cout << "Selecciona el tipo de operacion que ralizara: ";
-                                                                    cin >> ba;
-                                                                    switch (ba)
+                                                                    cin >> bb;
+                                                                    switch (bb)
                                                                     {
                                                                     //Funciones trigonometricas--------------------
                                                                     case 1:
-                                                                        
+                                                                        do
+                                                                        {
+                                                                            cout << "1.Coseno \n2.Seno \n3.Tangente \4.Regresar";
+                                                                            cout << "Selecciona la funcion que realizara: ";
+                                                                            cin >> cb;
+                                                                            switch (cb)
+                                                                            {
+                                                                            //Coseno
+                                                                            case 1:
+                                                                                f = (cos(x) * cos(x))/cos(x);
+                                                                                do
+                                                                                {
+                                                                                    cout << "Que tipo de funcion utiliza tu integral?(1.x/y o 2.(x)(y) o 3.Es toda la parte de abajo)" << endl;
+                                                                                    cin >> ac;
+                                                                                    switch (ac)
+                                                                                    {
+                                                                                    //Funcion como division
+                                                                                    case 1:
+                                                                                        
+                                                                                        break;
+                                                                                    //Funcion como multiplicacion
+                                                                                    case 2:
+
+                                                                                        break;
+                                                                                    //Fin parte de abajo
+                                                                                    default:
+
+                                                                                        break;
+                                                                                    }
+                                                                                } while (ac!=4);
+                                                                                
+                                                                                break;
+                                                                            //Seno
+                                                                            case 2:
+
+                                                                                break;
+                                                                            //Tangente
+                                                                            case 3:
+
+                                                                                break;
+                                                                            //Regresar
+                                                                            default:
+
+                                                                                break;
+                                                                            }
+                                                                        } while (cb!=4);
                                                                         break;
                                                                     //Funciones hiperbolicas-----------------------
                                                                     case 2:
@@ -244,7 +289,6 @@ tanh	Compute hyperbolic tangent (function)
 Funciones exponenciales y logaritmicas
 exp	Compute exponential function (function)
 log	Compute natural logarithm (function)
-log10	Compute common logarithm (function)
 
 Funciones de potencia
 pow	Raise to power (function)
