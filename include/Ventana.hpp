@@ -8,7 +8,7 @@ using namespace std;
 class Ventana
 {
 public:
-    int GameWindow(int width, int height, const std::string& title) {
+    int Window(int width, int height, const std::string& title) {
         window.create(sf::VideoMode(width, height), title);
     }
 

@@ -8,18 +8,15 @@ class Intervalo
 {
 private:
     int i, y;
-public:
-    // int *ptrX = new int x[0];
     double h;
-    int a, b;
-
+public:
     Intervalo() {
         
     }
 
     ~Intervalo() {}
 
-    void CalcularX()
+    void calcularX(float a, float b)
     {
         h = (b - a) / 2;
         y = (b - a) / h;
@@ -31,7 +28,7 @@ public:
         }
     }
 
-    void ImprimirX()
+    void imprimirX()
     {
         double x[y];
         for (i = 0; i <= y; i++)
