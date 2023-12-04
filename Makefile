@@ -1,8 +1,21 @@
-bin/main : src/main.cpp
-	g++ src/main.cpp -o bin/main -I include -l curses
+CXX = g++
+all: main
 
-run : bin/main
-	./bin/main
+bin/main : src/main.vpp include/*
+	$(CXX) $< -o $@ -I include 
+
+run: bin/main
+	./$<
+
+
+# bin/main : src/main.cpp
+# 	g++ src/main.cpp -o bin/main -I include -l curses
+
+# run : bin/main
+# 	./bin/main
+
+
+
 
 # # Nombre del programa
 # TARGET = programa_numerico
