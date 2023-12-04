@@ -1,12 +1,15 @@
 @startuml Simpson
+
 class Ventana
 class MenuInicio
 class Metodo
 class Ecuacion
-class 
+class Intervalo
 
-Ventana -> MenuInicio
-MenuInicio -|> Metodo
-Metodo -|> Ecuacion
+Ventana --o MenuInicio
+MenuInicio *-- Metodo
+Metodo o-- Ecuacion
+Ecuacion --> Metodo 
+Ecuacion *-- Intervalo
 
 @enduml
