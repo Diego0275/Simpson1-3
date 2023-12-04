@@ -1,5 +1,4 @@
 @startuml Simpson
-
 class Ventana
 class MenuInicio
 class Metodo
@@ -11,5 +10,4 @@ MenuInicio *-- Metodo
 Metodo o-- Ecuacion
 Ecuacion --> Metodo 
 Ecuacion *-- Intervalo
-
 @enduml

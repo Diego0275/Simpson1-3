@@ -1,7 +1,7 @@
 #pragma once
 
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -18,149 +18,215 @@ public:
     Ecuacion() {}
     ~Ecuacion() {}
 
-    void RecibirEcuacion(double x){
+    void RecibirEcuacion(double x)
+    {
         do
         {
-            cout<<"Ingresa la opcion correcta para poder resolver la integral mediante el metodo simpson"<< endl;
-            cout<<"Que tipo de funcion utiliza tu integral?(1.x/y o 2.(x)(y))"<<endl;
-            cin>>a;
+            cout << "Ingresa la opcion correcta para poder resolver la integral mediante el metodo simpson" << endl;
+            cout << "Que tipo de funcion utiliza tu integral?(1.x/y o 2.(x)(y))" << endl;
+            cin >> a;
             switch (a)
             {
-            //Funcion como division-------------------------------------------------------------------------------
+            // Funcion como division-------------------------------------------------------------------------------
             case 1:
                 do
                 {
-                    cout<<"Comienza ingresando la parte de arriba de tu funcion"<<endl;
-                    cout<<"1.Trigonometrica \n2.Hiperbolica \n3.Exponencial o logaritmica \n4.Raiz o potencia \5.Regresar"<<endl;
-                    cout<<"Selecciona el tipo de operacion que ralizara: ";
-                    cin>>b;
+                    cout << "Comienza ingresando la parte de arriba de tu funcion" << endl;
+                    cout << "1.Trigonometrica \n2.Hiperbolica \n3.Exponencial o logaritmica \n4.Raiz o potencia \n6.Suma, resta o por la variable \n5.Regresar" << endl;
+                    cout << "Selecciona el tipo de operacion que ralizara: ";
+                    cin >> b;
                     switch (b)
                     {
-                    //Funciones trigonometricas-------------------------------------------------------------------
+                    // Funciones trigonometricas-------------------------------------------------------------------
                     case 1:
-                        do{
-                            cout<<"1.Coseno \n2.Seno \n3.Tangente \4.Regresar";
-                            cout<<"Selecciona la funcion que realizara: ";
-                            cin>>c;
+                        do
+                        {
+                            cout << "1.Coseno \n2.Seno \n3.Tangente \n4.Regresar";
+                            cout << "Selecciona la funcion que realizara: ";
+                            cin >> c;
                             switch (c)
                             {
-                            //Coseno------------------------------------------------------------------------------
+                            // Coseno------------------------------------------------------------------------------
                             case 1:
-                                f=cos(x);
+                                f = cos(x);
                                 do
                                 {
-                                    cout<<"Que tipo de funcion utiliza tu integral?(1.x/y o 2.(x)(y))"<<endl;
-                                    cin>>aa;
+                                    cout << "Que tipo de funcion utiliza tu integral?(1.x/y o 2.(x)(y) o 3.Es toda la parte de arriba)" << endl;
+                                    cin >> aa;
                                     switch (aa)
                                     {
-                                    //Funcion como division-------------------------------------------------------
+                                    // Funcion como division-------------------------------------------------------
                                     case 1:
                                         do
                                         {
-                                            cout<<"Comienza ingresando la parte de arriba de tu funcion"<<endl;
-                                            cout<<"1.Trigonometrica \n2.Hiperbolica \n3.Exponencial o logaritmica \n4.Raiz o potencia \5.Regresar"<<endl;
-                                            cout<<"Selecciona el tipo de operacion que ralizara: ";
-                                            cin>>ba;
+                                            cout << "Comienza ingresando la parte de arriba de tu funcion" << endl;
+                                            cout << "1.Trigonometrica \n2.Hiperbolica \n3.Exponencial o logaritmica \n4.Raiz o potencia \n5.Suma, resta o por la variable \n6.Regresar" << endl;
+                                            cout << "Selecciona el tipo de operacion que ralizara: ";
+                                            cin >> ba;
                                             switch (ba)
                                             {
-                                            //Funciones trigonometricas------------------------------------------
+                                            // Funciones trigonometricas------------------------------------------
                                             case 1:
                                                 do
                                                 {
-                                                    cout<<"1.Coseno \n2.Seno \n3.Tangente \4.Regresar";
-                                                    cout<<"Selecciona la funcion que realizara: ";
-                                                    cin>>ca;
+                                                    cout << "1.Coseno \n2.Seno \n3.Tangente \4.Regresar";
+                                                    cout << "Selecciona la funcion que realizara: ";
+                                                    cin >> ca;
                                                     switch (ca)
                                                     {
-                                                    //Coseno------------------------------------------------------
+                                                    // Coseno------------------------------------------------------
                                                     case 1:
+                                                        f = (cos(x) * cos(x));
+                                                        do
+                                                        {
+                                                            cout<<"Ahora con la parte de abajo"<<endl;
+                                                            cout << "Ingresa la opcion correcta para poder resolver la integral mediante el metodo simpson" << endl;
+                                                            cout << "Que tipo de funcion utiliza tu integral?(1.x/y o 2.(x)(y))" << endl;
+                                                            cin >> ab;
+                                                            switch (ab)
+                                                            {
+                                                            //Funcion como division--------------------------------
+                                                            case 1:
+                                                                do
+                                                                {
+                                                                   cout << "1.Trigonometrica \n2.Hiperbolica \n3.Exponencial o logaritmica \n4.Raiz o potencia \n5.Suma, resta o por la variable \n6.Regresar" << endl;
+                                                                    cout << "Selecciona el tipo de operacion que ralizara: ";
+                                                                    cin >> ba;
+                                                                    switch (ba)
+                                                                    {
+                                                                    //Funciones trigonometricas--------------------
+                                                                    case 1:
+                                                                        
+                                                                        break;
+                                                                    //Funciones hiperbolicas-----------------------
+                                                                    case 2:
+
+                                                                        break;
+                                                                    //Funciones exponencial y logaritmicas--------
+                                                                    case 3:
+
+                                                                        break;
+                                                                    //Funciones con raiz o potencia----------------
+                                                                    case 4:
+
+                                                                        break;
+                                                                    //Por la variable------------------------------
+                                                                    case 5:
+
+                                                                        break;
+                                                                    //Regresar-------------------------------------
+                                                                    default:
+                                                                        break;
+                                                                    }
+                                                                } while (bb!=4);
+                                                                
+                                                                break;
+                                                            //Funcion como multiplicacion--------------------------
+                                                            case 2:
+
+                                                                break;
+                                                            default:
+                                                                break;
+                                                            }
+                                                        } while (ab!=3);
                                                         
                                                         break;
-                                                    //Seno--------------------------------------------------------
+                                                    // Seno--------------------------------------------------------
                                                     case 2:
-
+                                                        f = (cos(x) * sin(x));
                                                         break;
-                                                    //Tangente----------------------------------------------------
+                                                    // Tangente----------------------------------------------------
                                                     case 3:
-
+                                                        f = (cos(x) * tan(x));
                                                         break;
-                                                    //Regresar----------------------------------------------------
+                                                    // Regresar----------------------------------------------------
                                                     default:
                                                         break;
                                                     }
-                                                } while (ca!=4);
+                                                } while (ca != 4);
                                                 break;
-                                            //Funciones hiperbolicas---------------------------------------------
+                                            // Funciones hiperbolicas---------------------------------------------
                                             case 2:
 
                                                 break;
-                                            //Funciones exponenciales y logaritmicas-----------------------------
+                                            // Funciones exponenciales y logaritmicas-----------------------------
                                             case 3:
 
                                                 break;
-                                            //Funciones con raiz o potencia-------------------------------------
+                                            // Funciones con raiz o potencia-------------------------------------
                                             case 4:
 
                                                 break;
-                                            //Regresar-----------------------------------------------------------
+                                            // Por la variable
+                                            case 5:
+
+                                                break;
+                                            // Regresar-----------------------------------------------------------
                                             default:
                                                 break;
                                             }
-                                        } while (ba=!5);
+                                        } while (ba = !5);
                                         break;
-                                    //Funcion como multiplicacion------------------------------------------------
+                                    // Funcion como multiplicacion------------------------------------------------
                                     case 2:
 
                                         break;
-                                    //Regresar-------------------------------------------------------------------
+                                    // Fin parte de arriba
+                                    case 3:
+
+                                        break;
+                                    // Regresar-------------------------------------------------------------------
                                     default:
                                         break;
                                     }
-                                }while(aa=!2);
+                                } while (aa = !2);
                                 break;
-                            //Seno-------------------------------------------------------------------------------
+                            // Seno-------------------------------------------------------------------------------
                             case 2:
 
                                 break;
-                            //Tangente---------------------------------------------------------------------------
+                            // Tangente---------------------------------------------------------------------------
                             case 3:
 
                                 break;
-                            //Regresar---------------------------------------------------------------------------
+                            // Regresar---------------------------------------------------------------------------
                             default:
 
                                 break;
                             }
-                        }while(c!=4);
+                        } while (c != 4);
                         break;
-                    //Funciones hiperbolicas---------------------------------------------------------------------
+                    // Funciones hiperbolicas---------------------------------------------------------------------
                     case 2:
 
                         break;
-                    //Funciones exponenciales y logaritmicas-----------------------------------------------------
+                    // Funciones exponenciales y logaritmicas-----------------------------------------------------
                     case 3:
 
                         break;
-                    //Funciones con raiz o potencia--------------------------------------------------------------
+                    // Funciones con raiz o potencia--------------------------------------------------------------
                     case 4:
 
                         break;
-                    //Regresar-----------------------------------------------------------------------------------
+                    // Por la variable
+                    case 5:
+
+                        break;
+                    // Regresar-----------------------------------------------------------------------------------
                     default:
                         break;
                     }
                 } while (b != 5);
-                
-            //Funcion como multiplicacion-----------------------------------------------------------------------
+
+            // Funcion como multiplicacion-----------------------------------------------------------------------
             case 2:
-                cout<<"Ingresa tu funcion";
+                cout << "Ingresa tu funcion";
                 break;
             default:
-                cout<<"Esta opcion no esta, por favor ingresa una valida."<<endl;
+                cout << "Esta opcion no esta, por favor ingresa una valida." << endl;
                 break;
             }
-        } while (a == 1&2);
-        
+        } while (a == 1 & 2);
     }
 };
 
