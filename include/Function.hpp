@@ -1,8 +1,10 @@
 #pragma once
 
+#include <tinyexpr.h>
 #include <iostream>
 #include <Intervalo.hpp>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -35,7 +37,7 @@ public:
     {
         if (expr)
         {
-            for (xN : xL)
+            for (i = 0; i < xL.size(); i++)
             {
                 // Evaluar la funcion
                 resultado = te_eval(expr);

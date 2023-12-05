@@ -5,7 +5,6 @@
 
 int main(int argc, char const *argv[])
 {
-    Intervalo ej;
     double x, y;
     /* Store variable names and pointers. */
     te_variable vars[] = {{"x", &x}, {"y", &y}};

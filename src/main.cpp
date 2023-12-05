@@ -5,8 +5,6 @@
 #include <Simpson.hpp>
 #include <cmath>
 #include <iomanip>
-#include <string>
-#include <tinyexpr.h>
 
 using namespace std;
 

@@ -16,6 +16,8 @@ protected:
     vector<double> xL;
 
 public:
+    Intervalo(){}
+    
     Intervalo(float a, float b)
     {
         h = (b - a) / 2;
