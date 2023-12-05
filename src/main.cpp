@@ -1,10 +1,12 @@
 #include <iostream>
 #include <MenuInicio.hpp>
-#include <Funcion.hpp>
+#include <Function.hpp>
 #include <Intervalo.hpp>
 #include <Simpson.hpp>
 #include <cmath>
 #include <iomanip>
+#include <string>
+#include <tinyexpr.h>
 
 using namespace std;
 
@@ -15,7 +17,7 @@ int main(int argc, char const *argv[])
     MenuInicio menu;
     int opcf;
     double f;
-    Funcion funcion;
+    Function funcion;
     Intervalo intervalo;
     Simpson simp;
 
@@ -28,47 +30,9 @@ int main(int argc, char const *argv[])
         {
         case 1:
             cout << "-----SELECCION DE FUNCION-----" << endl;
-            do
-            {
-                funcion.mostrarFunciones();
-                opcf = funcion.leerOpcion();
-
-                switch (opcf)
-                {
-                case 1:
-                    //f=2/(pow(x, 2)-4);
-                    break;
-                case 2:
-                    //f=sin(x)/x;
-                    break;
-                case 3:
-                    //f=sqrt(pow(x, 3)+4);
-                    break;
-                case 4:
-                    //f=pow(x, 3)/(1+sqrt(x));
-                    break;
-                case 5:
-                    //f=sqrt(1+pow(x, 2));
-                    break;
-                case 6:
-                    //f=(exp(sqrt(x))*sqrt(exp(sqrt(x))-1))/sqrt(x);
-                    break;
-                case 7:
-                    //f=exp(pow(x, 2));
-                    break;
-                case 8:
-                    //f=1/(1+x);
-                    break;
-                case 9:
-                    //f=pow(x, 2)+8*x-12;
-                    break;
-                case 10:
-                    //f=pow(x, 3)*log(x);
-                    break;
-                default:
-                    break;
-                }
-            } while (opcf!=11);
+            funcion.leerFuncion();
+            funcion.evaluarFuncion();
+            funcion.imprimirResultados();
             break;
         case 2:
             cout << "-----INGRESAR FIX-----" << endl;
@@ -86,7 +50,7 @@ int main(int argc, char const *argv[])
             break;
             intervalo.calcularX(a, b);
             intervalo.imprimirX();
-            //cout << "El resultado es: " << fixed << setprecision(fix) << simp.evaluarFuncion() << endl;
+            cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
         case 4:
             cout << "Gracias por usar el programa." << endl;
             break;

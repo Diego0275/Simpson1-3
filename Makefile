@@ -1,17 +1,15 @@
-CXX = g++
-
 all: bin/main
 
-bin/main : src/main.cpp include/*
-	$(CXX) $< -o $@ -I include
+#bin/main : src/main.cpp include/*
+#	g++ $< -o $@ -I include
 
-bin/expr : src/expr.cpp
-	g++ -c src/expr.cpp -o temp/expr.o -Iinclude
+bin/main : src/main.cpp
+	g++ -c src/main.cpp -o temp/main.o -Iinclude
 	gcc -c src/tinyexpr.c -o temp/tinyexpr.o -Iinclude
-	g++ temp/expr.o temp/tinyexpr.o -o $@
+	g++ temp/main.o temp/tinyexpr.o -o $@
 
-runFunction : bin/expr
-	./$<
+#runFunction : bin/expr
+#	./$<
 
 run: bin/main
 	./$<
