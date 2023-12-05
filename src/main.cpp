@@ -29,8 +29,6 @@ int main(int argc, char const *argv[])
         case 1:
             cout << "-----SELECCION DE FUNCION-----" << endl;
             funcion.leerFuncion();
-            funcion.evaluarFuncion();
-            funcion.imprimirResultados();
             break;
         case 2:
             cout << "-----INGRESAR FIX-----" << endl;
@@ -47,7 +45,9 @@ int main(int argc, char const *argv[])
             cin >> n;
             break;
             intervalo.calcularX(a, b);
+            funcion.evaluarFuncion();
             intervalo.imprimirX();
+            funcion.imprimirResultados();
             cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
         case 4:
             cout << "Gracias por usar el programa." << endl;
