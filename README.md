@@ -13,6 +13,16 @@ La fórmula general para el método de Simpson 1/3 para aproximar la integral de
 ## Procedimiento ##
 El procedimiento general para aplicar el método de Simpson 1/3 es dividir el intervalo de integración en subintervalos de igual longitud, aplicar la fórmula en cada par de subintervalos consecutivos y sumar los resultados para obtener la aproximación final de la integral definida.
 
+## Como se usa ##
+El programa cuenta con un menu de opciones en el que el usuario introducira: 
+Paso 1
+La ecuacion (del metodo simpson 1/3) con la que desea obtener el resultado, asi como el fix (cantidad de decimales a partir del punto).
+Paso 2
+El limite tanto superior como inferior de la integral (desde que valor inicia X0 hasta que valor termina X) y la longitud del intervalo (numero par)
+Paso 3
+Finalmente el programa te lanzara el resultado final de la ecuacion.
+NOta: En caso de que el usuario introduzca un valor incorrecto el programa lanzara un mensaje de opcion incorrecta
+
 #### Datos del equipo ####
 - Becerril Vizcaya Diego 22310275
 - Higareda Arguello Dominick 22310191
