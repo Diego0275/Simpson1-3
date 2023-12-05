@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
             break;
             intervalo.calcularX(a, b);
             intervalo.imprimirX();
-            cout << "El resultado es: " << fixed << setprecision(fix) << simp.evaluarFuncion() << endl;
+            //cout << "El resultado es: " << fixed << setprecision(fix) << simp.evaluarFuncion() << endl;
         case 4:
             cout << "Gracias por usar el programa." << endl;
             break;
