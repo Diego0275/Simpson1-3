@@ -1,6 +1,7 @@
 #include <tinyexpr.h>
 #include <iostream>
 #include <string>
+#include <Intervalo.hpp>
 
 int main(int argc, char const *argv[])
 {

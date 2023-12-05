@@ -1,6 +1,7 @@
 #pragma once
 
-#include<iostream>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -8,33 +9,45 @@ class Intervalo
 {
 private:
     int i, y;
+    int *xI;
+
+protected:
     double h;
+    vector<double> xL;
+
 public:
-    Intervalo() {
-        y=0;
-        h=0;
-    }
-
-    ~Intervalo() {}
-
-    void calcularX(float a, float b)
+    Intervalo(){}
+    
+    Intervalo(float a, float b)
     {
         h = (b - a) / 2;
         y = (b - a) / h;
-        double x[y];
-        x[0] = a;
-        for (i = 1; i <= y; i++)
+        xI = new int[y];
+    }
+
+    ~Intervalo()
+    {
+        delete[] xI;
+    }
+
+    void calcularX(float a, float b)
+    {
+        for (int i = 0; i < y; i++)
         {
-            x[i] = a + h * i;
+            xI[i] = a + h * i;
+        }
+
+        for (int i = 0; i < y; i++)
+        {
+            xL.push_back(xI[i]);
         }
     }
 
     void imprimirX()
     {
-        double x[y];
-        for (i = 0; i <= y; i++)
+        for (i = 0; i < xL.size(); i++)
         {
-            cout << "X" << i << " = " << x[i] << endl;
+            cout << "X" << i + 1 << "=" << xL[i] << endl;
         }
     }
 };
