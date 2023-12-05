@@ -1,8 +1,17 @@
 CXX = g++
-all: main
 
-bin/main : src/main.vpp include/*
-	$(CXX) $< -o $@ -I include 
+all: bin/main
+
+bin/main : src/main.cpp include/*
+	$(CXX) $< -o $@ -I include
+
+bin/expr : src/expr.cpp
+	g++ -c src/expr.cpp -o temp/expr.o -Iinclude
+	gcc -c src/tinyexpr.c -o temp/tinyexpr.o -Iinclude
+	g++ temp/expr.o temp/tinyexpr.o -o $@
+
+runFunction : bin/expr
+	./$<
 
 run: bin/main
 	./$<

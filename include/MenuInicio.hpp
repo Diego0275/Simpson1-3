@@ -13,8 +13,6 @@ private:
     int i;
 
 public:
-    MenuInicio() {}
-
     ~MenuInicio() {}
 
     MenuInicio()

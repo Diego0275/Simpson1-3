@@ -11,7 +11,8 @@ private:
     double h;
 public:
     Intervalo() {
-        
+        y=0;
+        h=0;
     }
 
     ~Intervalo() {}
