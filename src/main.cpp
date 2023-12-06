@@ -43,12 +43,13 @@ int main(int argc, char const *argv[])
             cin >> a;
             cout << "Ingresa la longitud del intervalo(Tiene que ser numero par): ";
             cin >> n;
-            intervalo.valorIntervalo(a , b, n);
+            intervalo.valorIntervalo(a, b, n);
             intervalo.calcularX(a, b);
-            funcion.evaluarFuncion();
+            funcion.prueba();
+            funcion.evaluarFuncion(a, b);
             intervalo.imprimirX();
             funcion.imprimirResultados();
-            cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
+            // cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
             system("pause");
             system("cls");
             break;

@@ -15,13 +15,16 @@ private:
     string funcion;
     double xN, x;
     te_expr *expr;
+    Intervalo inter;
 
 protected:
     vector<double> resultados;
 
 public:
     Function() {}
+    
     ~Function() {}
+
 
     void leerFuncion()
     {
@@ -39,7 +42,11 @@ public:
 
     }
 
-    void evaluarFuncion()
+    void prueba(){
+        cout << xL.size() << endl;
+    }
+
+    void evaluarFuncion(float a, float b)
     {
         //cout << "X" << i + 1 << "=" << xL[i] << endl;
         // if (expr)

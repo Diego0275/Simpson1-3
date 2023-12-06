@@ -8,7 +8,7 @@ using namespace std;
 class Intervalo
 {
 private:
-    int i, y;
+    int y;
     float *xI;
 
 protected:
@@ -16,7 +16,9 @@ protected:
     vector<double> xL;
 
 public:
-    Intervalo(){}
+    Intervalo()
+    {
+    }
     
     void valorIntervalo(float a, float b, int n)
     {
@@ -54,7 +56,7 @@ public:
     void imprimirX()
     {
         cout << "VALOR DE X" << endl;
-        for (i = 0; i < xL.size(); i++)
+        for (int i = 0; i < xL.size(); i++)
         {
             cout << "X" << i + 1 << "=" << xL[i] << endl;
         }
