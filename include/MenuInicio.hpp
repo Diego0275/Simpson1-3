@@ -17,7 +17,7 @@ public:
 
     MenuInicio()
     {
-        opciones.push_back("Mostrar historial");
+        opciones.push_back("Ingresar la funcion");
         opciones.push_back("Ingresar Fix");
         opciones.push_back("Iniciar");
         opciones.push_back("Salir");
@@ -35,8 +35,8 @@ public:
 
     int leerOpcion()
     {
-        cout << "Ingrese la opción deseada: ";
+        cout << "Ingrese la opcion deseada: ";
         cin >> opcionSeleccionada;
-        return opcionSeleccionada - 1;
+        return opcionSeleccionada;
     }
 };

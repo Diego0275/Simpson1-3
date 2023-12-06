@@ -5,6 +5,7 @@
 #include <Simpson.hpp>
 #include <cmath>
 #include <iomanip>
+#include <cstdlib>
 
 using namespace std;
 
@@ -19,6 +20,7 @@ int main(int argc, char const *argv[])
     Intervalo intervalo;
     Simpson simp;
 
+    system("cls");
     do
     {
         menu.mostrarMenu();
@@ -29,11 +31,13 @@ int main(int argc, char const *argv[])
         case 1:
             cout << "-----SELECCION DE FUNCION-----" << endl;
             funcion.leerFuncion();
+            system("cls");
             break;
         case 2:
             cout << "-----INGRESAR FIX-----" << endl;
             cout << "Ingresa el valor de fix con el que deseas obtener el resultado: ";
             cin >> fix;
+            system("cls");
             break;
         case 3:
             cout << "-----METODO SIMPSON-----" << endl;
@@ -43,17 +47,22 @@ int main(int argc, char const *argv[])
             cin >> a;
             cout << "Ingresa la longitud del intervalo(Tiene que ser numero par): ";
             cin >> n;
-            break;
             intervalo.calcularX(a, b);
             funcion.evaluarFuncion();
             intervalo.imprimirX();
             funcion.imprimirResultados();
             cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
+            system("pause");
+            system("cls");
+            break;
         case 4:
             cout << "Gracias por usar el programa." << endl;
+            system("pause");
+            system("cls");
             break;
         default:
             cout << "Opcion invalida, por favor ingresa un dato que sea correcto" << endl;
+            system("cls");
             break;
         }
     } while (opc != 4);

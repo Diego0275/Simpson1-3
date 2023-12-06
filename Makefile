@@ -11,8 +11,11 @@ bin/main : src/main.cpp
 #runFunction : bin/expr
 #	./$<
 
-run: bin/main
+run : bin/main
 	./$<
+
+clean : bin/main
+	rm $<
 
 
 # bin/main : src/main.cpp

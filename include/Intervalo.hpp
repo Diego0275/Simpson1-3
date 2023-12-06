@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
 
 using namespace std;
 
@@ -27,7 +28,6 @@ public:
 
     ~Intervalo()
     {
-        delete[] xI;
     }
 
     void calcularX(float a, float b)
@@ -45,6 +45,7 @@ public:
 
     void imprimirX()
     {
+        cout << "VALOR DE X" << endl;
         for (i = 0; i < xL.size(); i++)
         {
             cout << "X" << i + 1 << "=" << xL[i] << endl;

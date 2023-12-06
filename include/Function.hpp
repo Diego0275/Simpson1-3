@@ -14,6 +14,7 @@ private:
     int err, i;
     string funcion;
     double xN, resultado, x;
+    te_expr *expr;
 
 protected:
     vector<double> resultados;
@@ -30,7 +31,7 @@ public:
         // Declaramos funcion con variables
         cout << "Ingresa tu formula: " << endl;
         cin >> funcion;
-        te_expr *expr = te_compile(funcion.c_str(), vars, 1, &err);
+        expr = te_compile(funcion.c_str(), vars, 1, &err);
     }
 
     void evaluarFuncion()
@@ -53,6 +54,7 @@ public:
 
     void imprimirResultados()
     {
+        cout << "VALOR DE LA FUNCIONES EVALUADAS" << endl;
         for (i = 0; i < resultados.size(); i++)
         {
             cout << "Funcion evaluada en X" << i << "=" << resultados[i] << endl;
