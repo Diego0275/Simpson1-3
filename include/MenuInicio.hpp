@@ -17,7 +17,6 @@ public:
 
     MenuInicio()
     {
-        opciones.push_back("Ingresar la funcion");
         opciones.push_back("Ingresar Fix");
         opciones.push_back("Iniciar");
         opciones.push_back("Salir");

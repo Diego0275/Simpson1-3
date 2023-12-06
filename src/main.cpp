@@ -29,24 +29,21 @@ int main(int argc, char const *argv[])
         switch (opc)
         {
         case 1:
-            cout << "-----SELECCION DE FUNCION-----" << endl;
-            funcion.leerFuncion();
-            system("cls");
-            break;
-        case 2:
             cout << "-----INGRESAR FIX-----" << endl;
             cout << "Ingresa el valor de fix con el que deseas obtener el resultado: ";
             cin >> fix;
             system("cls");
             break;
-        case 3:
+        case 2:
             cout << "-----METODO SIMPSON-----" << endl;
+            funcion.leerFuncion();
             cout << "Ingresa el limite superior: ";
             cin >> b;
             cout << "Ingresa el limite inferior: ";
             cin >> a;
             cout << "Ingresa la longitud del intervalo(Tiene que ser numero par): ";
             cin >> n;
+            intervalo.VIntervalo(a , b, n);
             intervalo.calcularX(a, b);
             funcion.evaluarFuncion();
             intervalo.imprimirX();
@@ -55,7 +52,7 @@ int main(int argc, char const *argv[])
             system("pause");
             system("cls");
             break;
-        case 4:
+        case 3:
             cout << "Gracias por usar el programa." << endl;
             system("pause");
             system("cls");
@@ -65,7 +62,7 @@ int main(int argc, char const *argv[])
             system("cls");
             break;
         }
-    } while (opc != 4);
+    } while (opc != 3);
 
     return 0;
 }
