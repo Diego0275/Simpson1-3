@@ -18,7 +18,7 @@ protected:
 public:
     Intervalo(){}
     
-    void VIntervalo(float a, float b, int n)
+    void valorIntervalo(float a, float b, int n)
     {
         h = (b - a) / n;
         y = (b - a) / h;

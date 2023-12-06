@@ -43,7 +43,7 @@ int main(int argc, char const *argv[])
             cin >> a;
             cout << "Ingresa la longitud del intervalo(Tiene que ser numero par): ";
             cin >> n;
-            intervalo.VIntervalo(a , b, n);
+            intervalo.valorIntervalo(a , b, n);
             intervalo.calcularX(a, b);
             funcion.evaluarFuncion();
             intervalo.imprimirX();

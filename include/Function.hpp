@@ -13,7 +13,7 @@ class Function : public Intervalo
 private:
     int err, i;
     string funcion;
-    double xN, resultado, x;
+    double xN, x;
     te_expr *expr;
 
 protected:
@@ -26,30 +26,45 @@ public:
     void leerFuncion()
     {
         // Almacenar el nombre de la variable y el puntero
-        te_variable vars[] = {{"x", &x}};
+        te_variable vars[] = {"x", &x};
 
         // Declaramos funcion con variables
         cout << "Ingresa tu formula: " << endl;
         cin >> funcion;
         expr = te_compile(funcion.c_str(), vars, 1, &err);
+        if (!expr)
+        {
+            cout << "Error en la formula ingresada en caracter " << err << endl;
+        }
+
     }
 
     void evaluarFuncion()
     {
-        if (expr)
-        {
+        //cout << "X" << i + 1 << "=" << xL[i] << endl;
+        // if (expr)
+        // {
             for (i = 0; i < xL.size(); i++)
             {
-                // Evaluar la funcion
-                resultado = te_eval(expr);
+                x=xL[i];
+                //Evaluar la funcion
+                const double resultado = te_eval(expr);
+                cout << "x "<< x << "r" <<resultado << endl;
+
                 resultados.push_back(resultado);
+                te_free(expr);
             }
-            te_free(expr);
-        }
-        else
-        {
-            cout << "Error en la formula ingresada en caracter " << err;
-        }
+        // }
+        // else
+        // {
+        //     cout << "Error en la formula ingresada en caracter " << err;
+        // }
+
+        // for(i = 0; i < xL.size(); i++){
+        //     x=xL[i];
+        //     resultado = te_eval(expr);
+        //     resultados.push_back(resultado);
+        // }
     }
 
     void imprimirResultados()
