@@ -24,6 +24,10 @@ Finalmente el programa te lanzara el resultado final de la ecuacion.
 NOta: En caso de que el usuario introduzca un valor incorrecto el programa lanzara un mensaje de opcion incorrecta
 
 ## Capturas de pantalla Funcionamiento ##
+[![Datos-Solicitados.png](https://i.postimg.cc/zBQMH9BF/Datos-Solicitados.png)](https://postimg.cc/sQpKtH5M)
+[![Fix.png](https://i.postimg.cc/6Q21JMz7/Fix.png)](https://postimg.cc/HJmtb4qH)
+[![Menu.png](https://i.postimg.cc/mk2YRDRd/Menu.png)](https://postimg.cc/r030NqDW)
+[![Muestra-Resultados.png](https://i.postimg.cc/HszwSbwf/Muestra-Resultados.png)](https://postimg.cc/JGyH0Ddq)
 
 #### Datos del equipo ####
 - Becerril Vizcaya Diego 22310275
