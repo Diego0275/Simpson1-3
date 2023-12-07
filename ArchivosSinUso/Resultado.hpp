@@ -1,24 +1,19 @@
 #pragma once
 
 #include <iostream>
-#include <Intervalo.hpp>
-#include <Function.hpp>
-#include <tinyexpr.h>
+#include <vector>
 
 using namespace std;
 
-class Simpson : public Function
+class Resultado
 {
 private:
-    double x;
-    te_expr *expr;
     double sum;
-
+    vector<double> xIntervalo;
+    vector<double> resultados;
 public:
-    Simpson() {}
-
-    ~Simpson() {}
-
+    Resultado() {}
+    ~Resultado() {}
     double reslutadoSimpson(int n)
     {
         for (int i = 1; i <= n / 2; i++)
