@@ -45,7 +45,6 @@ int main(int argc, char const *argv[])
             cin >> n;
             intervalo.VIntervalo(a, b, n);
             intervalo.calcularX(a, b);
-            funcion.prueba();
             funcion.evaluarFuncion(a, b);
             intervalo.imprimirX();
             funcion.imprimirResultados();

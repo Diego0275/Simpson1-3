@@ -16,10 +16,10 @@ protected:
     vector<double> xL;
 
 public:
-    Intervalo() {
-        //this->xL = intervalos;
-    }
-    
+    Intervalo() {}
+
+    ~Intervalo() {}
+
     void VIntervalo(float a, float b, int n)
     {
         h = (b - a) / n;
@@ -27,29 +27,16 @@ public:
         xI = new float[y];
     }
 
-    ~Intervalo()
-    {
-    }
-
     void calcularX(float a, float b)
     {
-        // cout << h << endl;
-        // cout << y << endl;
-        // cout << a << endl;
-        // cout << b << endl;
-        // cout << "-------------" << endl;
         for (int i = 0; i < y; i++)
         {
             xI[i] = (h * i) + a;
-            // cout << xI[i] << endl;
         }
-
-        //cout << "-------------" << endl;
 
         for (int i = 0; i < y; i++)
         {
             xL.push_back(xI[i]);
-            //cout << "X" << i + 1 << "=" << xL[i] << endl;
         }
     }
 

@@ -20,26 +20,16 @@ protected:
     vector<double> resultados;
 
 public:
-    Function() {
-        //this->xL = intervalos;
-    }
-    
-    ~Function() {}
+    Function() {}
 
+    ~Function() {}
 
     void leerFuncion()
     {
-        // Almacenar el nombre de la variable y el puntero
         te_variable vars[] = {{"x", &x}};
-
-        // Declaramos funcion con variables
         cout << "Ingresa tu formula: " << endl;
         cin >> funcion;
         expr = te_compile(funcion.c_str(), vars, 1, &err);
-    }
-
-    void prueba(){
-        cout << xL.size() << endl;
     }
 
     void evaluarFuncion(float a, float b)
@@ -48,7 +38,6 @@ public:
         {
             for (i = 0; i < xL.size(); i++)
             {
-                // Evaluar la funcion
                 resultado = te_eval(expr);
                 resultados.push_back(resultado);
             }
