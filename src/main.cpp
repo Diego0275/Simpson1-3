@@ -11,15 +11,13 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    vector<double> *intervalos;
-
     float a, b;
     int opc, fix, n;
     MenuInicio menu;
     int opcf;
     double f;
-    Function funcion(intervalos);
-    Intervalo intervalo(intervalos);
+    Function funcion;
+    Intervalo intervalo;
     Simpson simp;
 
     system("cls");
@@ -45,13 +43,13 @@ int main(int argc, char const *argv[])
             cin >> a;
             cout << "Ingresa la longitud del intervalo(Tiene que ser numero par): ";
             cin >> n;
-            intervalo.valorIntervalo(a, b, n);
+            intervalo.VIntervalo(a, b, n);
             intervalo.calcularX(a, b);
             funcion.prueba();
             funcion.evaluarFuncion(a, b);
             intervalo.imprimirX();
             funcion.imprimirResultados();
-            // cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
+            cout << "El resultado es: " << fixed << setprecision(fix) << simp.reslutadoSimpson(n) << endl;
             system("pause");
             system("cls");
             break;
