@@ -1,11 +1,14 @@
 @startuml Simpson
 class MenuInicio
-class Metodo
+class Simpson
 class Intervalo
 class Function
+class tinyexpr
 
 MenuInicio o-- Simpson 
+Simpson o-- tinyexpr
 Simpson *-- Function 
+Function o-- tinyexpr
 Function *-- Intervalo
 
 @enduml

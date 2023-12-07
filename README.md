@@ -24,9 +24,6 @@ Finalmente el programa te lanzara el resultado final de la ecuacion.
 NOta: En caso de que el usuario introduzca un valor incorrecto el programa lanzara un mensaje de opcion incorrecta
 
 ## Capturas de pantalla Funcionamiento ##
-[![image.png](https://i.postimg.cc/59k5Ljxp/image.png)](https://postimg.cc/14wNZmVN)
-
-[![image-1.png](https://i.postimg.cc/fyjfxf5P/image-1.png)](https://postimg.cc/kRGSC80N)
 
 #### Datos del equipo ####
 - Becerril Vizcaya Diego 22310275
