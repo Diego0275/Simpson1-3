@@ -8,6 +8,8 @@ class Intervalo
 Ventana --o MenuInicio
 MenuInicio *-- Metodo
 Metodo o-- Ecuacion
+Simpson --> Metodo
 Ecuacion --> Metodo 
+Metodo o-- Function
 Ecuacion *-- Intervalo
 @enduml
