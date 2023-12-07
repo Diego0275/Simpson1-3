@@ -13,11 +13,11 @@ private:
 
 protected:
     double h;
-    vector<double> xL;
+    vector<double> *xL;
 
 public:
-    Intervalo()
-    {
+    Intervalo(vector<double> *intervalos) {
+        this->xL = intervalos;
     }
     
     void valorIntervalo(float a, float b, int n)
@@ -48,7 +48,7 @@ public:
 
         for (int i = 0; i < y; i++)
         {
-            xL.push_back(xI[i]);
+            xL->push_back(xI[i]);
             //cout << "X" << i + 1 << "=" << xL[i] << endl;
         }
     }
@@ -56,7 +56,7 @@ public:
     void imprimirX()
     {
         cout << "VALOR DE X" << endl;
-        for (int i = 0; i < xL.size(); i++)
+        for (int i = 0; i < xL->size(); i++)
         {
             cout << "X" << i + 1 << "=" << xL[i] << endl;
         }

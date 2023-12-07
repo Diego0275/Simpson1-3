@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class Function : public Intervalo
+class Function
 {
 private:
     int err, i;
@@ -16,12 +16,15 @@ private:
     double xN, x;
     te_expr *expr;
     Intervalo inter;
+    vector<double> *xL;
 
 protected:
     vector<double> resultados;
 
 public:
-    Function() {}
+    Function(vector<double> *intervalos) {
+        this->xL = intervalos;
+    }
     
     ~Function() {}
 

@@ -11,13 +11,15 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    vector<double> *intervalos;
+
     float a, b;
     int opc, fix, n;
     MenuInicio menu;
     int opcf;
     double f;
-    Function funcion;
-    Intervalo intervalo;
+    Function funcion(intervalos);
+    Intervalo intervalo(intervalos);
     Simpson simp;
 
     system("cls");
